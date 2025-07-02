@@ -1,0 +1,157 @@
+/* General Styling */
+html, body {
+    min-height: 100vh;
+}
+
+body{
+    margin: 0 15%;
+    padding: 0;
+    background-color: rgb(180, 188, 195);
+    font-family: "PlayFair Display";
+    display: flex;
+}
+
+nav {
+    width: 220px;
+    background-color: rgb(98, 106, 111);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+nav ul li{
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+
+nav ul li a {
+    color: white;
+    border: 1px solid white;
+    border-radius: .2em;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color:blueviolet;
+}
+
+nav img{
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    width: 80px;
+    height: auto;
+    object-fit: contain; 
+}
+
+.content {
+    margin-left: 50px;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: left;
+    font: bold 2em "Farro";
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+    color: black;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: Arial;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+td, th { border: 2px solid darkblue; }
+table { 
+    border: 2px solid black; 
+    width: 95%;
+}
+
+ul li{
+    margin: 10px 0;
+}
+
+
+/* Responsive web design styling*/
+/* Some fonts grow bigger when screen is larger, more spacing */
+
+
+/* When the screen size is smaller than 800px nav block changes to a list,
+and other components get smaller (font, list, headers) */
+@media screen and (max-width: 800px) {
+    nav {
+        display: block;
+        margin-top: 2em;
+        font-family: cursive;
+        font-style: italic;
+        font-size: .75em;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 1em;
+    }
+    p{
+        font-size:.8em;
+    }
+    q{
+        font-size:.8em;
+    }
+
+    ul li{
+        font-size: smaller;
+    }
+
+    ol li{
+        font-size: .8em;
+    }
+
+    .content{
+        margin-left: 200px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    nav ul li {
+        flex: none;
+    }
+    nav ul {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    img {
+        float: top;
+        width: auto;
+        margin: 0 1em 1em 0;
+    }
+}
